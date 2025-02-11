@@ -53,7 +53,10 @@ const saveToExcel = (data, sheetName) => {
     console.error("❌ Error saving to Excel:", error);
   }
 };
-
+// root api 
+app.get("/",(req,res) => {
+  res.status(201).json({res:"success"})
+});
 // Save Inquiry Form Data
 app.post("/api/inquiry", (req, res) => {
   console.log("🔹 Inquiry Data Received:", req.body); // Debugging
