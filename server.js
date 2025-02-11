@@ -55,7 +55,7 @@ const saveToExcel = (data, sheetName) => {
 };
 // root api 
 app.get("/",(req,res) => {
-  res.json("server is running smoothly")
+  res.status(201).json({res:"success"})
 });
 // Save Inquiry Form Data
 app.post("/api/inquiry", (req, res) => {
