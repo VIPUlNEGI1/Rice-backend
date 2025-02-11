@@ -79,6 +79,11 @@ app.get("/api/inquiries", (req, res) => {
   res.json(data);
 });
 
+//root api
+app.get('/',(req,res) => {
+  res.json("server running successfully");
+})
+
 // Get Contacts Data
 app.get("/api/contacts", (req, res) => {
   const data = readFromExcel("Contacts");
